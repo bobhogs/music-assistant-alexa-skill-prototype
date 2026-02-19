@@ -7,8 +7,8 @@
   "startup": "services",
   "boot": "auto",
   "ports": {
-    "5000/tcp": "5000",
-    "5678/tcp": "5678"
+    "5000/tcp": 5000,
+    "5678/tcp": 5678
   },
   "ports_description": {
     "5000/tcp": "Skill API port",
@@ -31,7 +31,6 @@
     "AWS_DEFAULT_REGION": "str"
   },
   "webui": "http://[HOST]:[PORT]",
-  "map": [],
   "ingress": false,
   "host_network": false
 }
