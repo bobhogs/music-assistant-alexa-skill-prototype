@@ -6,6 +6,10 @@
   "arch": ["amd64", "i386", "armhf", "armv7", "aarch64"],
   "startup": "services",
   "boot": "auto",
+  "ports": {
+    "5000/tcp": 5000,
+    "5678/tcp": 5678
+  },
   "ingress": false,
   "host_network": false
 }
