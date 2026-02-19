@@ -30,6 +30,8 @@
     "DEBUG_PORT": "int",
     "AWS_DEFAULT_REGION": "str"
   },
+  "webui": "http://[HOST]:[PORT]",
+  "map": [],
   "ingress": false,
   "host_network": false
 }
