@@ -22,6 +22,14 @@
     "DEBUG_PORT": 5678,
     "AWS_DEFAULT_REGION": "us-east-1"
   },
+  "schema": {
+    "MA_HOSTNAME": "str",
+    "APP_USERNAME": "str",
+    "APP_PASSWORD": "str",
+    "PORT": "int",
+    "DEBUG_PORT": "int",
+    "AWS_DEFAULT_REGION": "str"
+  },
   "ingress": false,
   "host_network": false
 }
