@@ -10,6 +10,18 @@
     "5000/tcp": 5000,
     "5678/tcp": 5678
   },
+  "ports_description": {
+    "5000/tcp": "Skill API port",
+    "5678/tcp": "Debug port (optional)"
+  },
+  "options": {
+    "MA_HOSTNAME": "",
+    "APP_USERNAME": "",
+    "APP_PASSWORD": "",
+    "PORT": 5000,
+    "DEBUG_PORT": 5678,
+    "AWS_DEFAULT_REGION": "us-east-1"
+  },
   "ingress": false,
   "host_network": false
 }
