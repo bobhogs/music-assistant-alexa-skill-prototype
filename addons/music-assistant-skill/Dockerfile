@@ -1,23 +1,17 @@
-FROM python:3.10-slim
+# Dockerfile
 
-ENV PYTHONUNBUFFERED=1
-WORKDIR /opt/music-assistant
+# Use the official Python image from the Docker Hub
+FROM python:3.8-slim
 
-# Install build dependencies required by some Python packages
-RUN apt-get update \ 
-    && apt-get install -y --no-install-recommends \ 
-       build-essential \ 
-       libffi-dev \ 
-       libssl-dev \ 
-    && rm -rf /var/lib/apt/lists/*
+# Set the working directory in the container
+WORKDIR /app
 
-# Copy the whole repository into the image so the service can import local modules
-COPY . /opt/music-assistant
+# Copy the requirements file and install dependencies
+COPY app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install Python dependencies used by the skill web service
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel \ 
-    && pip install --no-cache-dir -r app/requirements.txt
+# Copy the rest of the application code
+COPY . .
 
-EXPOSE 5000 5678
-
-CMD ["python", "app/app.py"]
+# Command to run the application
+CMD ["python", "your_app.py"]
