@@ -13,7 +13,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy only requirements first, then install dependencies
-COPY /app/requirements.txt /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 RUN python3.10 -m venv venv && \
     . venv/bin/activate && \
     pip install --upgrade pip && \
